@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #F9FAFB;
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #1F2937;
+    list-style: none;
+    text-decoration:none;
+    list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    background-color:#F9FAFB
+   
 }
+
+
+.navbar {
+    padding: 2rem 0;
+}
+
+
+
+.introduction img {
+    width: 250px;
+    height: 250px;
+}
+
+.max-650{
+    max-width: 650px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part-two{
+    padding-top: 4rempx;
+}
+
+/* Experience.css */
+#about-me {
+    padding: 0px;
+}
+
+.job {
+    box-shadow: 0 2px 4px rgba(242, 232, 232, 0.1);
+}
+
+.job .list-group-item {
+    border: 0;
+    padding-left: 0;
+}
+
