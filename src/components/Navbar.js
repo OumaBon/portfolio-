@@ -1,36 +1,50 @@
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 
-const Navbar = () => {
-  const location = useLocation(); // Get the current path
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg">
-        <div className="container">
-          <Link className="navbar-brand fw-bold text-danger fs-3" to="/">BO.</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className={`nav-link fw-light ${location.pathname === '/' ? 'active' : ''}`} aria-current="page" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">About Me</Link>
-              </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`} to="/projects">Projects</Link>
-              </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <header className="w-full font-didact p-1">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-lg font-bold">BO</h1>
+
+        {/* Hamburger Icon */}
+        <button 
+          className="md:hidden flex items-center focus:outline-none" 
+          onClick={toggleMenu}
+        >
+          <svg 
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M4 6h16M4 12h16m-7 6h7" 
+            />
+          </svg>
+        </button>
+
+        {/* Navigation Links */}
+        <nav className={`md:flex ${isOpen ? 'block' : 'hidden'} absolute md:static w-full md:w-auto`}>
+          <ul className="flex flex-col md:flex-row">
+            <li className="p-4 font-didact"><a href="#home">Home</a></li>
+            <li className="p-4"><a href="#about">About</a></li>
+            <li className="p-4"><a href="#skills">Services</a></li>
+            <li className="p-4"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
 
-export default Navbar;
+export default Header;
