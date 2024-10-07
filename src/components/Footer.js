@@ -8,17 +8,17 @@ const Footer = () => {
           
           {/* Social Media Links */}
           <div className="mb-4 md:mb-0">
-            <h3 className="text-lg font-semibold text-gray-200 mb-2 font-didact">Connect with Me</h3>
+            <h3 className="text-lg font-semibold text-orange-500 mb-2 font-didact">Connect with Me</h3>
             <div className="flex space-x-4">
 
-                <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} className="h-6 w-6 text-gray-400 hover:text-white transition" />
+                <a href="https://github.com/OumaBon" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faGithub} className="h-5 w-5 text-gray-400 hover:text-orange-500 transitio" />
                 </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedin} className="h-6 w-6 text-gray-400 hover:text-white transition" />
+                <a href="https://www.linkedin.com/in/boniface-ouma-057606262/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5 text-gray-400 hover:text-orange-500 transition" />
                 </a>
                 <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} className="h-6 w-6 text-gray-400 hover:text-white transition" />
+                <FontAwesomeIcon icon={faTwitter} className="h-5 w-5 text-gray-400 hover:text-orange-500 transition" />
                 </a>
               
             </div>
@@ -26,11 +26,11 @@ const Footer = () => {
   
           {/* Footer Navigation Links */}
           <div className="mb-4 md:mb-0">
-            <h3 className="text-lg font-semibold text-gray-200 mb-2 font-didact">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-orange-500 mb-2 font-didact">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#about" className="hover:text-orange-500 font-didact">About Me</a></li>
-              <li><a href="#projects" className="hover:text-white font-didact">Projects</a></li>
-              <li><a href="#contact" className="hover:text-white font-didact">Contact</a></li>
+              <li><a href="#projects" className="hover:text-orange-500 font-didact">Projects</a></li>
+              <li><a href="#contact" className="hover:text-orange-500 font-didact">Contact</a></li>
             </ul>
           </div>
   
